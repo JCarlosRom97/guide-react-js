@@ -1,17 +1,21 @@
 import './ButtonList.css'
+import { useNavigate } from 'react-router-dom'
 type exerciseType = {
-    id: number, 
-    name: string
+    id: number,
+    name: string,
+    url: string
 }
 
-type ButtonListProps ={
+type ButtonListProps = {
     exercise: exerciseType
 }
 
-export const ButtonList = ({exercise}:ButtonListProps) =>{
+export const ButtonList = ({ exercise }: ButtonListProps) => {
 
+    const navigate = useNavigate();
+    const redirectToPage = (route: string) => navigate(route);
 
-    return(
-        <button>{exercise.name}</button>
+    return (
+        <button onClick={() => redirectToPage(exercise.url)}>{exercise.name}</button>
     )
 }

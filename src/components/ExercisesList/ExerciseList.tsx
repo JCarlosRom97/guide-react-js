@@ -3,7 +3,8 @@ import { ButtonList } from "./ButtonList";
 
 type ExercisesType = {
     id: number,
-    name: string
+    name: string,
+    url: string
 }
 
 type ExerciseListProps = {
@@ -14,7 +15,7 @@ export const ExerciseList = ({ list }: ExerciseListProps) => {
     return (
         <div className="exercisesContainer">
             {list.map(((exercise:ExercisesType) =>(
-                <ButtonList exercise={exercise} />
+                <ButtonList key={exercise.id} exercise={exercise} />
             )))}
         </div>
     )
