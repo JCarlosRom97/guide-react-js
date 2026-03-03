@@ -23,7 +23,7 @@ h3,
 h4,
 h5 {
   text-align: center;
-  color: white;
+  color: #c0bfbf;
 }
 
 input {
@@ -41,8 +41,8 @@ select {
 
 .Item {
   color: white;
-  border: 1px solid #08c8f3;
-  background-color: #0562f9;
+  border: 1px solid #515254;
+  background-color: #142b5d;
   width: 20%;
   padding-top: 5px;
   margin: 10px;
@@ -53,7 +53,7 @@ select {
 }
 
 .Item:hover {
-  background-color: #2f78ed;
+  background-color: #1c305d;
 }
 
 .horizontalContainer {

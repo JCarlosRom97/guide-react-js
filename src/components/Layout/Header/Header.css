@@ -1,7 +1,7 @@
 .header{
     padding: 30px;
     color: rgb(251, 251, 251);
-    background-color: #000039;
+    background-color: #34405b;
     border-radius: 10px;
     margin-bottom: 50px;
 }
@@ -36,7 +36,7 @@
 .containerButtonsHeader a, .containerButtonsHeader button{
     font-size: 22px;
     background: none;
-    color: white;
+    color: #c3c4ff;
     padding: 8px 16px;
     border: none;
     cursor: pointer;
