@@ -53,7 +53,7 @@ export const ListSorting = () => {
                         <option value="rating">Sort by Rating</option>
                     </select>
                 </div>
-                <div className="containerProducts">
+                <div className="horizontalContainer">
                     {filteredAndSorted.map((product) => (
                         <ProductItem product={product} key={product.id} />
                     ))}

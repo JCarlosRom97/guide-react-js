@@ -17,8 +17,11 @@ code {
   text-align: center;
 }
 
-h3 {
-  font-size: 36px;
+h1,
+h2,
+h3,
+h4,
+h5 {
   text-align: center;
   color: white;
 }
@@ -34,4 +37,34 @@ select {
   height: 30px;
   border-radius: 10px;
   background-color: white;
+}
+
+.Item {
+  color: white;
+  border: 1px solid #08c8f3;
+  background-color: #0562f9;
+  width: 20%;
+  padding-top: 5px;
+  margin: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Item:hover {
+  background-color: #2f78ed;
+}
+
+.horizontalContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.verticalContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
 }

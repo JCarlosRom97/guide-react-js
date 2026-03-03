@@ -16,6 +16,6 @@ export const ButtonList = ({ exercise }: ButtonListProps) => {
     const redirectToPage = (route: string) => navigate(route);
 
     return (
-        <button className='buttonExercise' onClick={() => redirectToPage(exercise.url)}>{exercise.name}</button>
+        <button className='Item buttonExercise' onClick={() => redirectToPage(exercise.url)}>{exercise.name}</button>
     )
 }

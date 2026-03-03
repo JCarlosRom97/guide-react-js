@@ -5,9 +5,9 @@ export const Home = () => {
 
   return (
     <>
-      <h3>React Core</h3>
+      <h2>React Core</h2>
       <ExerciseList list={exercisesReactHooks} />
-      <h3>React Web</h3>
+      <h2>React Web</h2>
       <ExerciseList list={exercisesReactWeb} />
     </>
 

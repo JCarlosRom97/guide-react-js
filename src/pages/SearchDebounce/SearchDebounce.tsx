@@ -51,7 +51,7 @@ export const SearchDebounce = () => {
             {error && (
                 <p>{error}</p>
             )}
-            <div className='userListContainer'>
+            <div className='horizontalContainer'>
                 {users && users.map((user)=>(
                     <div className='userList' key={user.id}>{user.name}</div>
                 ))}
