@@ -1,8 +1,9 @@
 .header{
     padding: 30px;
+    color: rgb(251, 251, 251);
 }
 
-h1:hover{
-    color: rgb(72, 72, 72);
+.header:hover{
+    color: rgb(202, 209, 250);
     cursor: pointer;
 }

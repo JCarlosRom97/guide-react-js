@@ -1,8 +1,11 @@
-.buttonExercise{
-    width: 650px;
-    padding: 30px 0px 30px 0px;
-    margin: 30px;
-};
+.buttonExercise {
+  padding: 10px 20px;       /* vertical | horizontal */
+  margin: 10px;
+  background-color: #58c4dc;
+  border-radius: 10px;
+  width: 80%;
+  height: 60px;
+}
 
 button:hover{
     cursor: pointer;
