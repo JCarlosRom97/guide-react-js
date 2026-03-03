@@ -1,0 +1,21 @@
+.userListContainer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.userList{
+    color: white;
+    border: 1px solid #08c8f3;
+    background-color: #0562f9;
+    width: 50%;
+    height: 30px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.userList:hover{
+    cursor: pointer;
+}

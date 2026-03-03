@@ -1,9 +1,49 @@
 .header{
     padding: 30px;
     color: rgb(251, 251, 251);
+    background-color: #000039;
+    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 .header:hover{
     color: rgb(202, 209, 250);
     cursor: pointer;
+}
+
+.containerButtonsHeader{
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.containerButtonsHeader a, .containerButtonsHeader button{
+    font-size: 22px;
+    background: none;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.containerButtonsHeader button:hover .dropdown{
+    display: flex;
 }

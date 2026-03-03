@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Styles from './Counter.module.css';
+import './Counter.css';
 export const Counter = () => {
     const [counter, setCounter] = useState<number>(0);
     const [showLimitexceeded, setShowLimitExceeded] = useState(false);
@@ -48,9 +48,9 @@ export const Counter = () => {
 
     return (
         <>
-            <h3 className={Styles.counterTitleHeading}>Counter</h3>
-            <p className={Styles.counter}>{counter}</p>
-            <div className={Styles.containerButtons}>
+            <h3 className='counterTitleHeading'>Counter</h3>
+            <p className='counter'>{counter}</p>
+            <div className='containerButtons'>
                 <button onClick={() => calculate(-1)}>-</button>
                 <button
                     onClick={() => calculate(1)}
@@ -59,7 +59,7 @@ export const Counter = () => {
                 >+</button>
             </div>
             {showLimitexceeded && (
-                <h1 className={Styles.limitExceededAlert}>Limit Exceeded</h1>
+                <h1 className='limitExceededAlert'>Limit Exceeded</h1>
             )}
         </>
     )

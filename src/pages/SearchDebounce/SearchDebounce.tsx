@@ -43,16 +43,19 @@ export const SearchDebounce = () => {
     }, [query])
     return (
         <div>
-            <input type="text" name="query" id="query" value={query} onChange={handleInput} />
+            <h3>Search Debounce</h3>
+            <input className='inputSearch' type="text" name="query" id="query" value={query} onChange={handleInput} />
             {loading && (
                 <p>Loading...</p>
             )}
             {error && (
                 <p>{error}</p>
             )}
-            {users && users.map((user)=>(
-                <div key={user.id}>{user.name}</div>
-            ))}
+            <div className='userListContainer'>
+                {users && users.map((user)=>(
+                    <div className='userList' key={user.id}>{user.name}</div>
+                ))}
+            </div>
         </div>
     )
 }

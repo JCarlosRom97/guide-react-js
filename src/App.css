@@ -17,4 +17,21 @@ code {
   text-align: center;
 }
 
+h3 {
+  font-size: 36px;
+  text-align: center;
+  color: white;
+}
 
+input {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+select {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: white;
+}

@@ -1,0 +1,28 @@
+
+.counter {
+  font-size: 68px;
+  color: white;
+  text-align: center;
+}
+
+.containerButtons {
+  display: flex;          
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.containerButtons button {
+  width: 100px;
+  height: 30px;
+  margin: 20px;
+  display: flex;             
+  justify-content: center;
+  align-items: center;
+  background-color: #58c4dc;
+}
+
+.limitExceededAlert {
+  color: brown;
+  text-align: center;
+}
