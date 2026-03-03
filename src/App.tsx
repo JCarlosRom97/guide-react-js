@@ -7,6 +7,8 @@ import { ListSorting } from "./pages/ListSorting";
 import { CustomHook } from "./pages/CustomHook";
 import { Dashboard } from "./pages/Dashboard";
 import { Header } from './components/Layout/Header';
+// React Hooks
+import { UseEffectScreen } from './pages/useEffect';
 export const App = () => {
     return (
         <div className="App">
@@ -18,6 +20,8 @@ export const App = () => {
                 <Route path="/list-sorting" element={<ListSorting />} />
                 <Route path="/custom-hook" element={<CustomHook />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                {/* React hooks */}
+                  <Route path="/useEffect" element={<UseEffectScreen />} />
             </Routes>
         </div>
     )

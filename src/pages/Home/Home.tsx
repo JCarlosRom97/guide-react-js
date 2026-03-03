@@ -1,10 +1,14 @@
-import { exercisesJson } from '../../data/exercises';
+import { exercisesReactWeb } from '../../data/exercisesReactWeb';
+import { exercisesReactHooks } from '../../data/exercisesReactHooks';
 import { ExerciseList } from '../../components/ExercisesList';
 export const Home = () => {
 
   return (
     <>
-      <ExerciseList list={exercisesJson} />
+      <h3>React Core</h3>
+      <ExerciseList list={exercisesReactHooks} />
+      <h3>React Web</h3>
+      <ExerciseList list={exercisesReactWeb} />
     </>
 
   );

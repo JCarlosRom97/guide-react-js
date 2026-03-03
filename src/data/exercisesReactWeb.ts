@@ -4,7 +4,7 @@ type Exercise = {
     url:string
 }
 
-export const exercisesJson: Exercise[] = [
+export const exercisesReactWeb: Exercise[] = [
     {
         id: 1,
         name: "SmartCounter with Hold-to-Increment",
