@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Product } from "../types/ListSorting";
+import { Product } from "../types";
 export const useGenerateArray = (count: number): Product[] => {
     return useMemo(() => {
         const categories = ["Tech", "Clothes", "Books", "Sports"];

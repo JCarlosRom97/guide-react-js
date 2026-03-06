@@ -1,55 +1,41 @@
 import './index.css';
-import { ChangeEvent, useEffect, useState } from "react"
-
-type Users = {
-    id: number,
-    name: string,
-    email: string
-}
-
+import { ChangeEvent, useEffect, useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { AppDispatch } from '../../app/store';
+import { getUsers } from '../../features/users/userSelector';
+import { fetchUsers } from '../../features/users/userSlice';
+import { emptyUsers } from '../../features/users/userSlice';
 
 export const SearchDebounce = () => {
     const [query, setQuery] = useState<string>("");
-    const [users, setUsers] = useState<Users[]>([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
     const handleInput = (e: ChangeEvent<HTMLInputElement>) => setQuery(e.target.value);
-
+    const dispatch = useDispatch<AppDispatch>();
+    const {users, loading, error} = useSelector(getUsers);
+    
     useEffect(() => {
         const controller = new AbortController();
         if (!query.trim()) {
-            setUsers([]);
+            dispatch(emptyUsers());
             return;
         }
-        setLoading(true)
         const timeoutId = setTimeout(async () => {
-            try {
-                const response = await fetch(`https://jsonplaceholder.typicode.com/users?name_like=${query}`, { signal: controller.signal });
-                const data: Users[] = await response.json();
-                setUsers(data);
-                setError("");
-            } catch (error) {
-                if (error instanceof Error && error.name !== "AbortError") {
-                    setError(error.message);
-                }
-            }finally{
-                setLoading(false);
-            }
+           dispatch(fetchUsers(query));
         }, 500)
         return ()=>{
             clearTimeout(timeoutId);
             controller.abort();
         }
-    }, [query])
+    }, [dispatch, query]);
+
     return (
         <div>
             <h3>Search Debounce</h3>
             <input className='inputSearch' type="text" name="query" id="query" value={query} onChange={handleInput} />
             {loading && (
-                <p>Loading...</p>
+                <h5>Loading...</h5>
             )}
             {error && (
-                <p>{error}</p>
+                <h5>{error}</h5>
             )}
             <div className='horizontalContainer'>
                 {users && users.map((user)=>(

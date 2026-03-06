@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Product } from "../../types/ListSorting";
+import { Product } from "../../types";
 
 type Props = {
     product: Product

@@ -1,5 +1,5 @@
 import { memo, useEffect } from "react";
-import { User } from "../../pages/useEffect/UseEffectScreen";
+import { User } from "../../types";
 
 export const UserList = memo(({ users }: { users: User[] }) =>{
     console.log("🔁 UserList render");

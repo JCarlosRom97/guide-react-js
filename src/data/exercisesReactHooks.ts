@@ -10,5 +10,10 @@ export const exercisesReactHooks: Exercise[] = [
         name: "UseEffects",
         url:"useEffect"
     },
+       {
+        id: 2,
+        name: "Async/Await Promises",
+        url:"async"
+    },
 
 ]

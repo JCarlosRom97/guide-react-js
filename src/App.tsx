@@ -7,6 +7,10 @@ import { ListSorting } from "./pages/ListSorting";
 import { CustomHook } from "./pages/CustomHook";
 import { Dashboard } from "./pages/Dashboard";
 import { Header } from './components/Layout/Header';
+import { Async } from './pages/Async';
+import { Pokemon } from './pages/Pokemon/Home';
+import { Detail } from './pages/Pokemon/Detail';
+
 // React Hooks
 import { UseEffectScreen } from './pages/useEffect';
 export const App = () => {
@@ -20,8 +24,11 @@ export const App = () => {
                 <Route path="/list-sorting" element={<ListSorting />} />
                 <Route path="/custom-hook" element={<CustomHook />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+                <Route path='/pokemon' element={<Pokemon />}/>
+                <Route path='/pokemon/detail/:id' element={<Detail />}/>
                 {/* React hooks */}
                   <Route path="/useEffect" element={<UseEffectScreen />} />
+                <Route path="/async" element={<Async />} />
             </Routes>
         </div>
     )

@@ -1,9 +1,7 @@
 import { memo, useEffect, useState } from "react";
 import { UserList } from "../../components/UserList";
-export type User = {
-    id: number,
-    name: string
-}
+import { User } from "../../types";
+
 export const UseEffectScreen = () => {
     console.log("UseEffect Screen render");
 
