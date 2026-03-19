@@ -1,62 +1,98 @@
 .header {
-    padding-top: 30px;
-    color: rgb(251, 251, 251);
-    background: rgba(59, 130, 246, 0.15);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin-bottom: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  padding: 20px 0;
+  background: linear-gradient(135deg, #1e2a47, #0f172a);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.header:hover {
-    color: rgb(202, 209, 250);
-    cursor: pointer;
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
-.headerTitle {
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+
+  /* animación sutil tipo React */
+  animation: spin 12s linear infinite;
+  opacity: 0.9;
 }
 
-.containerButtonsHeader {
-    display: flex;
-    flex-direction: row;
-    background: rgba(30, 41, 59, 0.7);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0px 10px 0px 10px;
+.header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #e2e8f0;
+  letter-spacing: 0.5px;
 }
 
-.dropdown {
-    position: absolute;
-    top: 120%;
-    left: 0;
-    background-color: #2a2a2a;
-    display: flex;
-    flex-direction: column;
-    min-width: 180px;
-    border-radius: 12px;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: all 0.25s ease;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+/* animación suave */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.containerButtonsHeader a,
-.containerButtonsHeader button {
-    font-size: 22px;
-    background: none;
-    color: #c3c4ff;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-decoration: none;
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0 0 0;
+
+  display: flex;
+  align-items: center;
 }
 
-.containerButtonsHeader button:hover .dropdown {
-    display: flex;
+.navItem {
+  position: relative;
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+
+  padding: 6px 4px;
+  transition: all 0.25s ease;
+}
+
+/* Hover elegante */
+.navItem:hover {
+  color: #ffffff;
+}
+
+/* Línea animada abajo */
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.25s ease;
+}
+
+.navItem:hover::after {
+  width: 100%;
+}
+
+/* Estado activo */
+.navItem.active {
+  color: #ffffff;
+}
+
+.navItem.active::after {
+  width: 100%;
 }

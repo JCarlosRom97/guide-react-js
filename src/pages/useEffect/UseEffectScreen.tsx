@@ -42,7 +42,7 @@ export const UseEffectScreen = () => {
             <h1>Use Effects</h1>
             <h2>Users</h2>
             <SearchInput search={search} setSearch={setSearch} />
-            <div className="horizontalContainer">
+            <div className="verticalContainer">
                 <UserList users={users}/>
             </div>
         </div>

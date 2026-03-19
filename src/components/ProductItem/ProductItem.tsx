@@ -7,7 +7,7 @@ type Props = {
 
 export const ProductItem = memo(({ product }: Props) => {
     return (
-        <div className="Item item--large">
+        <div className="Item">
             <h4>{product.name}</h4>
             <p>${product.price}</p>
             <p>{product.category}</p>

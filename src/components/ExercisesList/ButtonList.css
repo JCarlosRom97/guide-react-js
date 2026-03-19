@@ -7,4 +7,10 @@
 
 button:hover{
     cursor: pointer;
-};
+}
+
+.imgPokebola{
+  padding-top: 5px;
+  height: 20px;
+  padding-right: 5px;
+}

@@ -12,17 +12,17 @@ export const exercisesReactWeb: Exercise[] = [
     },
     {
         id: 2,
-        name: "SmartCounter with Hold-to-Increment",
+        name: "➕ SmartCounter with Hold-to-Increment",
         url:"counter"
     },
     {
         id: 3,
-        name: "SearchUsers with Debounce and Request Cancellation",
+        name: "🔍 SearchUsers with Debounce and Request Cancellation",
         url:"search-debounce"
     },
     {
         id: 4,
-        name: "Optimized Product List with Filtering and Sorting",
+        name: "📦 Optimized Product List with Filtering and Sorting",
         url:"list-sorting"
     },
 ]

@@ -10,7 +10,7 @@ export const Pokemon = () => {
     const { pokemons } = useSelector(getPokemons);
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate()
-    console.log(pokemons);
+
 
     const handleClick = useCallback((url: string) => {
         console.log(url);

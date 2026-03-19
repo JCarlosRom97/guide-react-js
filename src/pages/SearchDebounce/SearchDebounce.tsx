@@ -39,7 +39,7 @@ export const SearchDebounce = () => {
             )}
             <div className='horizontalContainer'>
                 {users && users.map((user)=>(
-                    <div className='Item item--large' key={user.id}>{user.name}</div>
+                    <div className='Item' key={user.id}>{user.name}</div>
                 ))}
             </div>
         </div>

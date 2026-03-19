@@ -17,19 +17,22 @@ export const App = () => {
     return (
         <div className="App">
             <Header />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/counter" element={<Counter />} />
-                <Route path="/search-debounce" element={<SearchDebounce />} />
-                <Route path="/list-sorting" element={<ListSorting />} />
-                <Route path="/custom-hook" element={<CustomHook />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path='/pokemon' element={<Pokemon />}/>
-                <Route path='/pokemon/detail/:id' element={<Detail />}/>
-                {/* React hooks */}
-                  <Route path="/useEffect" element={<UseEffectScreen />} />
-                <Route path="/async" element={<Async />} />
-            </Routes>
+            <div className='appContainer'>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/counter" element={<Counter />} />
+                    <Route path="/search-debounce" element={<SearchDebounce />} />
+                    <Route path="/list-sorting" element={<ListSorting />} />
+                    <Route path="/custom-hook" element={<CustomHook />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path='/pokemon' element={<Pokemon />} />
+                    <Route path='/pokemon/detail/:id' element={<Detail />} />
+                    {/* React hooks */}
+                    <Route path="/useEffect" element={<UseEffectScreen />} />
+                    <Route path="/async" element={<Async />} />
+
+                </Routes>
+            </div>
         </div>
     )
 }
