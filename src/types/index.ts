@@ -1,3 +1,9 @@
+export type Exercise = {
+    id: number,
+    name: string,
+    url:string
+}
+
 export type Product = {
   id: number;
   name: string;

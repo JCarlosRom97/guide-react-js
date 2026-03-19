@@ -17,9 +17,11 @@ type actionState = PayloadAction<User[]>;
 
 export const fetchUsers = createAsyncThunk(
     "users/fetchUser",
-    async (query: string) => {
+    async ({ query, signal }: { query: string, signal: AbortSignal }) => {
         const response = await fetch(
-            `https://jsonplaceholder.typicode.com/users?name_like=${query}`
+            `https://jsonplaceholder.typicode.com/users?name_like=${query}`,{
+                signal
+            }
         );
         if (!response.ok) throw new Error("Error fetching users");
         return response.json();
