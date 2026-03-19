@@ -8,12 +8,13 @@
 
 .userList{
     color: white;
-    border: 1px solid #08c8f3;
-    background-color: #0562f9;
+    border: 1px solid rgb(64, 82, 139);
+    background-color: rgba(30, 64, 175, 0.3);
     width: 50%;
     height: 30px;
     padding-top: 5px;
     text-align: center;
+    margin: 5px;
 }
 
 .userList:hover{

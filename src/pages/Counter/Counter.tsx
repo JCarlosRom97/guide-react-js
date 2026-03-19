@@ -10,7 +10,6 @@ export const Counter = () => {
         setCounter((counter) => {
             if (counter === 0 && move === -1) return counter;
             if (counter >= 10 && move === 1) return counter;
-            console.log(counter)
             return counter + move;
         });
     };
@@ -37,7 +36,6 @@ export const Counter = () => {
     }
 
     useEffect(() => {
-
         return () => stopTimers();
     }, []);
 
@@ -51,8 +49,9 @@ export const Counter = () => {
             <h3 className='counterTitleHeading'>Counter</h3>
             <p className='counter'>{counter}</p>
             <div className='containerButtons'>
-                <button onClick={() => calculate(-1)}>-</button>
+                <button className='item--xsmall' onClick={() => calculate(-1)}>-</button>
                 <button
+                    className='item--xsmall'
                     onClick={() => calculate(1)}
                     onMouseDown={handleMouseDown}
                     onMouseLeave={stopTimers}

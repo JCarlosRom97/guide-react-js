@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #20232a;
+  background: radial-gradient(circle at top, #1f2937, #111827);
 }
 
 code {
@@ -15,6 +15,16 @@ code {
 
 .App {
   text-align: center;
+}
+
+button {
+  color: white;
+  height: 30px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(30, 64, 175, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 h1,
@@ -41,19 +51,21 @@ select {
 
 .Item {
   color: white;
-  border: 1px solid #515254;
-  background-color: #142b5d;
-  width: 20%;
-  padding-top: 5px;
+  font-size: 16px;
+  background: rgba(30, 64, 175, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
   margin: 10px;
-  text-align: center;
-  font-size: 18px;
-  border-radius: 10px;
+  border-radius: 14px;
+  transition: all 0.25s ease;
   cursor: pointer;
 }
 
 .Item:hover {
-  background-color: #1c305d;
+  transform: translateY(-5px);
+  background: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
 }
 
 .horizontalContainer {
@@ -67,4 +79,16 @@ select {
   align-items: center;
   display: flex;
   flex-direction: row;
+}
+
+.item--xsmall {
+  width: 5%;
+}
+
+.item--small {
+  width: 10%;
+}
+
+.item--large {
+  width: 20%;
 }

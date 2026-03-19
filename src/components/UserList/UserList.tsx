@@ -11,7 +11,7 @@ export const UserList = memo(({ users }: { users: User[] }) =>{
     return (
         <>
             {users.map((u) => (
-                <div key={u.id} className="Item">
+                <div key={u.id} className="Item item--xsmall">
                     <h4>{u.name}</h4>
                 </div>
             ))}

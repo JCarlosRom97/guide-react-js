@@ -1,39 +1,52 @@
-.header{
-    padding: 30px;
+.header {
+    padding-top: 30px;
     color: rgb(251, 251, 251);
-    background-color: #34405b;
+    background: rgba(59, 130, 246, 0.15);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     margin-bottom: 50px;
 }
 
-.header:hover{
+.header:hover {
     color: rgb(202, 209, 250);
     cursor: pointer;
 }
 
-.containerButtonsHeader{
+.headerTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.containerButtonsHeader {
     display: flex;
     flex-direction: row;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0px 10px 0px 10px;
 }
 
 .dropdown {
-  position: absolute;
-  top: 120%;
-  left: 0;
-  background-color: #2a2a2a;
-  display: flex;
-  flex-direction: column;
-  min-width: 180px;
-  border-radius: 12px;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: all 0.25s ease;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-.containerButtonsHeader a, .containerButtonsHeader button{
+.containerButtonsHeader a,
+.containerButtonsHeader button {
     font-size: 22px;
     background: none;
     color: #c3c4ff;
@@ -44,6 +57,6 @@
     text-decoration: none;
 }
 
-.containerButtonsHeader button:hover .dropdown{
+.containerButtonsHeader button:hover .dropdown {
     display: flex;
 }
