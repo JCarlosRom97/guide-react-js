@@ -7,12 +7,12 @@ export type Product = {
 };
 
 export type User = {
-    id: number,
-    name: string
+  id: number,
+  name: string
 }
 
-export type pokemonListType ={
-  name: string, 
+export type pokemonListType = {
+  name: string,
   url: string
 }
 
@@ -35,6 +35,12 @@ export type PokemonDetail = {
     ability: {
       name: string
       url: string
+    }
+  }[]
+  stats: {
+    base_stat:string
+    stat:{
+      name:string
     }
   }[]
 }
