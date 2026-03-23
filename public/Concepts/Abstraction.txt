@@ -1,0 +1,20 @@
+class CoffeeMachine {
+    /* Hides complexity and exposes only what is necessary. */
+    makeCoffee() {
+        this.boilWater();
+        this.grindCoffee();
+        console.log("Coffee is ready ☕");
+    }
+
+    boilWater() {
+        console.log("Boiling water...");
+    }
+
+    grindCoffee() {
+        console.log("Grinding coffee...");
+    }
+}
+
+const machine = new CoffeeMachine();
+machine.makeCoffee();
+export {};

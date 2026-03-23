@@ -1,0 +1,21 @@
+/* The same method behaves differently depending on the object. */
+class Cat {
+  makeSound() {
+    console.log("Meow");
+  }
+}
+
+class Cow {
+  makeSound() {
+    console.log("Moo");
+  }
+}
+
+function playSound(animal: Cat | Cow) {
+  animal.makeSound();
+}
+
+playSound(new Cat()); // Meow
+playSound(new Cow()); // Moo
+
+export {};

@@ -45,12 +45,12 @@ export const exercisesReactWeb: Exercise[] = [
 export const exercisesJSCore: Exercise[] = [
     {
         id: 1,
-        name: "🧱 POO (pending)",
-        url: "poo"
+        name: "🧱 OOP",
+        url: "oop"
     },
     {
         id: 2,
-        name: "🧠 Solid Priciples (pending)",
+        name: "🧠 Solid Principles (pending)",
         url: "solid"
     },
     {

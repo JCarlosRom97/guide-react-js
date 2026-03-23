@@ -10,6 +10,7 @@ import { Header } from './components/Layout/Header';
 import { Async } from './pages/Async';
 import { Pokemon } from './pages/Pokemon/Home';
 import { Detail } from './pages/Pokemon/Detail';
+import OOP from './pages/OOP/OOP';
 
 // React Hooks
 import { UseEffectScreen } from './pages/useEffect';
@@ -30,6 +31,8 @@ export const App = () => {
                     {/* React hooks */}
                     <Route path="/useEffect" element={<UseEffectScreen />} />
                     <Route path="/async" element={<Async />} />
+                    {/* JS Core */}
+                    <Route path="/oop" element={<OOP />} />
 
                 </Routes>
             </div>

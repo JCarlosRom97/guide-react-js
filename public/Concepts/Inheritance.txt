@@ -1,0 +1,22 @@
+/* Main Class  */
+class Animal {
+    name: string;
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    makeSound() {
+        console.log("Generic sound");
+    }
+}
+/* Child Class extends from Animal */
+class Dog extends Animal {
+    makeSound() {
+        console.log("Woof woof");
+    }
+}
+// instance child class 
+const dog = new Dog("Firulais");
+dog.makeSound(); // Woof woof
+
+export {};
