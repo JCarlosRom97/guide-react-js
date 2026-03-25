@@ -1,0 +1,23 @@
+const UserProfile = ({ userId }) => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch(`/api/users/${userId}`)
+      .then(res => res.json())
+      .then(setUser);
+  }, [userId]);
+
+  const handleSave = () => {
+    fetch(`/api/users/${userId}`, {
+      method: 'PUT',
+      body: JSON.stringify(user)
+    });
+  };
+
+  return (
+    <div>
+      <h1>{user?.name}</h1>
+      <button onClick={handleSave}>Save</button>
+    </div>
+  );
+};

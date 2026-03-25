@@ -1,7 +1,7 @@
 import './styles.css'
 import { useEffect, useState } from 'react';
 import { CodeBlock } from '../../components/CodeBlock/CodeBlock';
-const OOP = () => {
+export const OOP = () => {
     const blankSpace = "\u00A0";
     const [codeAbstraction, setCodeAbstraction] = useState("");
     const [codeEncapsulation, setCodeEncapsulation] = useState("");
@@ -10,10 +10,10 @@ const OOP = () => {
 
     useEffect(() => {
         async function getCode() {
-            await fetchCode('/Concepts/Abstraction.txt', setCodeAbstraction);
-            await fetchCode('/Concepts/Encapsulation.txt', setCodeEncapsulation);
-            await fetchCode('/Concepts/Inheritance.txt', setCodeInheritance);
-            await fetchCode('/Concepts/Polymorphism.txt', setCodePolymorphism);
+            await fetchCode('/OOP/Abstraction.txt', setCodeAbstraction);
+            await fetchCode('/OOP/Encapsulation.txt', setCodeEncapsulation);
+            await fetchCode('/OOP/Inheritance.txt', setCodeInheritance);
+            await fetchCode('/OOP/Polymorphism.txt', setCodePolymorphism);
         }
 
         getCode();
@@ -100,4 +100,3 @@ const OOP = () => {
     )
 }
 
-export default OOP; 

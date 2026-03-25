@@ -13,7 +13,7 @@ export const CodeBlock = ({ code }: { code: string }) => {
       }}
     >
       <SyntaxHighlighter
-        language="typescript"
+        language="tsx"
         style={vscDarkPlus}
         showLineNumbers
         wrapLongLines
