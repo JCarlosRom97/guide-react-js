@@ -45,7 +45,7 @@ export const exercisesJSCore: Exercise[] = [
     },
     {
         id: 2,
-        name: "🧠 Solid Principles (pending)",
+        name: "🧠 Solid Principles",
         url: "solid"
     },
 ]
