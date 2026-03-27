@@ -1,0 +1,4 @@
+const Button = ({ type }) => {
+  if (type === 'primary') return <button style={{ color: 'blue' }}>Primary</button>;
+  if (type === 'secondary') return <button style={{ color: 'gray' }}>Secondary</button>;
+};

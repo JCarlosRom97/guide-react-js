@@ -1,21 +1,20 @@
 import { CodeBlock } from "../../../components/CodeBlock/CodeBlock";
 import { useFetchText } from "../../../hooks/useGetText";
 
-const SingleResponsability = () => {
+const InterfaceSegregation = () => {
     const { data: dataGoodImp, isLoading: isLoadingGoodImp, isError: isErrorGoodImp, error: errorGoodImp } = useFetchText(
-        '/Solid/SingleResponsability/goodImplementation.txt'
+        '/Solid/InterfaceSegregation/goodImplementation.txt'
     );
 
     const { data: dataBadImp, isLoading: isLoadingBadImp, isError: isErrorBadImplementation, error: errorBadImp } = useFetchText(
-        '/Solid/SingleResponsability/badImplementation.txt'
+        '/Solid/InterfaceSegregation/badImplementation.txt'
     );
-
     return (
         <section className="solidContainer">
             <header>
-                <h2>Single Responsibility Principle (SRP)</h2>
+                <h2>Interface Segregation Principle (ISP)</h2>
                 <p className="solid-description">
-                    A component or module should have only one reason to change.
+                    Don’t force components to depend on props they don’t use
                 </p>
             </header>
 
@@ -34,7 +33,6 @@ const SingleResponsability = () => {
                     <CodeBlock code={dataBadImp} />
                 )}
             </article>
-
             <article className="solid-block">
                 <h3>✅ Good Approach</h3>
                 {isLoadingGoodImp && <p>Loading code...</p>}
@@ -44,20 +42,18 @@ const SingleResponsability = () => {
                         Error: {errorGoodImp}
                     </p>
                 )}
-                <ul>
-                    <li><strong>Hook</strong> → state + fetching logic</li>
-                    <li><strong>Service</strong> → API communication</li>
-                    <li><strong>Component</strong> → UI</li>
-                </ul>
                 {!isLoadingGoodImp && !isErrorGoodImp && dataGoodImp && (
                     <CodeBlock code={dataGoodImp} />
                 )}
-                <p className="solid-highlight">
-                    👉 Easier to test, reuse, and maintain.
-                </p>
+                <ul>
+                    <li> <strong>Explanation:</strong></li>
+                    <li>Only pass what is needed.</li>
+                    <li>Keeps components <strong>clean and reusable.</strong></li>
+
+                </ul>
             </article>
         </section>
-    );
-};
+    )
+}
 
-export default SingleResponsability;
+export default InterfaceSegregation;

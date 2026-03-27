@@ -1,0 +1,24 @@
+// abstraction
+const useUsers = (fetchFn) => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetchFn().then(setUsers);
+  }, [fetchFn]);
+
+  return users;
+};
+
+// implementation
+const fetchUsers = () => fetch('/api/users').then(res => res.json());
+
+// component
+const UserList = () => {
+  const users = useUsers(fetchUsers);
+
+  return (
+    <ul>
+      {users.map(u => <li key={u.id}>{u.name}</li>)}
+    </ul>
+  );
+};

@@ -1,0 +1,23 @@
+// service
+export const fetchUser = async () => {
+  const res = await fetch('/api/user');
+  return res.json();
+};
+
+// component
+const UserProfile = ({ user }) => (
+  <div>
+    <h1>{user.name}</h1>
+  </div>
+);
+
+// container
+const UserContainer = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetchUser().then(setUser);
+  }, []);
+
+  return user ? <UserProfile user={user} /> : <p>Loading...</p>;
+};

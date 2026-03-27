@@ -1,0 +1,3 @@
+const UserCard = ({ name }) => (
+  <div>{name}</div>
+);

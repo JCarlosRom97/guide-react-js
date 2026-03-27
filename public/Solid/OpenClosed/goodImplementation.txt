@@ -1,0 +1,7 @@
+const Button = ({ children, style }) => {
+  return <button style={style}>{children}</button>;
+};
+
+// usage
+<Button style={{ color: 'blue' }}>Primary</Button>
+<Button style={{ color: 'gray' }}>Secondary</Button>

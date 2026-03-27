@@ -8,9 +8,12 @@
     color: #e2e8f0;
 }
 
-
 p {
     color: white;
     font-size: 18px;
     text-align: left;
+}
+
+li{
+    list-style-type: none;
 }

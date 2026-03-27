@@ -1,24 +1,24 @@
 import { CodeBlock } from "../../../components/CodeBlock/CodeBlock";
 import { useFetchText } from "../../../hooks/useGetText";
 
-const SingleResponsability = () => {
+const DependencyInversion = () => {
+
     const { data: dataGoodImp, isLoading: isLoadingGoodImp, isError: isErrorGoodImp, error: errorGoodImp } = useFetchText(
-        '/Solid/SingleResponsability/goodImplementation.txt'
+        '/Solid/DependencyInversion/goodImplementation.txt'
     );
 
     const { data: dataBadImp, isLoading: isLoadingBadImp, isError: isErrorBadImplementation, error: errorBadImp } = useFetchText(
-        '/Solid/SingleResponsability/badImplementation.txt'
+        '/Solid/DependencyInversion/badImplementation.txt'
     );
 
     return (
         <section className="solidContainer">
             <header>
-                <h2>Single Responsibility Principle (SRP)</h2>
+                <h2>Dependency Inversion Principle (DIP)</h2>
                 <p className="solid-description">
-                    A component or module should have only one reason to change.
+                    Depend on abstractions, not concrete implementations
                 </p>
             </header>
-
             <article className="solid-block">
                 <h3>❌ Bad Example</h3>
 
@@ -34,7 +34,6 @@ const SingleResponsability = () => {
                     <CodeBlock code={dataBadImp} />
                 )}
             </article>
-
             <article className="solid-block">
                 <h3>✅ Good Approach</h3>
                 {isLoadingGoodImp && <p>Loading code...</p>}
@@ -44,20 +43,18 @@ const SingleResponsability = () => {
                         Error: {errorGoodImp}
                     </p>
                 )}
-                <ul>
-                    <li><strong>Hook</strong> → state + fetching logic</li>
-                    <li><strong>Service</strong> → API communication</li>
-                    <li><strong>Component</strong> → UI</li>
-                </ul>
                 {!isLoadingGoodImp && !isErrorGoodImp && dataGoodImp && (
                     <CodeBlock code={dataGoodImp} />
                 )}
-                <p className="solid-highlight">
-                    👉 Easier to test, reuse, and maintain.
-                </p>
+                <ul>
+                    <li> <strong>Explanation:</strong></li>
+                    <li>Logic depends on an <strong>abstraction (fetchFn).</strong></li>
+                    <li>Makes testing and flexibility easier.</li>
+
+                </ul>
             </article>
         </section>
-    );
-};
+    )
+}
 
-export default SingleResponsability;
+export default DependencyInversion;

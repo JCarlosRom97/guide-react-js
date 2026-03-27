@@ -34,11 +34,6 @@ export const exercisesReactWeb: Exercise[] = [
         name: "📦 Optimized Product List with Filtering and Sorting",
         url: "list-sorting"
     },
-      {
-        id: 5,
-        name: "🔐 Login with security (pending)",
-        url: "login"
-    },
 ]
 
 
@@ -52,15 +47,5 @@ export const exercisesJSCore: Exercise[] = [
         id: 2,
         name: "🧠 Solid Principles (pending)",
         url: "solid"
-    },
-    {
-        id: 3,
-        name: "🔁 Currying (Pending)",
-        url: "search-debounce"
-    },
-    {
-        id: 4,
-        name: "🌐 API Calls (pending)",
-        url: "api"
     },
 ]

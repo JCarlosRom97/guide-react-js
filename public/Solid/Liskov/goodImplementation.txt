@@ -1,0 +1,5 @@
+const Button = ({ onClick, disabled }) => (
+  <button onClick={onClick} disabled={disabled}>
+    Click
+  </button>
+);
