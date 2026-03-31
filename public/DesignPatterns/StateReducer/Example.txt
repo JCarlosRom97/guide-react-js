@@ -1,0 +1,10 @@
+export const useCounter = (reducer) => {
+  const [count, setCount] = useState(0);
+
+  const dispatch = (action) => {
+    const newState = reducer ? reducer(count, action) : count + 1;
+    setCount(newState);
+  };
+
+  return { count, dispatch };
+};

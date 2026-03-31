@@ -1,0 +1,7 @@
+<Fetcher url="/api/users">
+  {(users) => (
+    <ul>
+      {users?.map(u => <li key={u.id}>{u.name}</li>)}
+    </ul>
+  )}
+</Fetcher>

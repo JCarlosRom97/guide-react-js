@@ -1,0 +1,8 @@
+export const useDropdown = () => {
+  const [open, setOpen] = useState(false);
+
+  return {
+    open,
+    toggle: () => setOpen(o => !o)
+  };
+};

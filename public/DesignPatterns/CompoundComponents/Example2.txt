@@ -1,0 +1,4 @@
+<Tabs>
+  <Tab index={0}>Tab 1</Tab>
+  <TabPanel index={0}>Content</TabPanel>
+</Tabs>

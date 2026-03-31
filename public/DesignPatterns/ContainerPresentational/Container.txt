@@ -1,0 +1,15 @@
+// UserContainer.tsx
+import { useEffect, useState } from "react";
+import { UserList } from "./UserList";
+
+export const UserContainer = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("/api/users")
+      .then(res => res.json())
+      .then(setUsers);
+  }, []);
+
+  return <UserList users={users} />;
+};

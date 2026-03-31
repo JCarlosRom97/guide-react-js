@@ -1,0 +1,12 @@
+// Component
+import { useUsers } from "./useUsers";
+
+export const Users = () => {
+  const { users } = useUsers();
+
+  return (
+    <ul>
+      {users.map(u => <li key={u.id}>{u.name}</li>)}
+    </ul>
+  );
+};
