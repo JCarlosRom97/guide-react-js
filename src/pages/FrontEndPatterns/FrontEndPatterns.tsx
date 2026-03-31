@@ -3,6 +3,7 @@ const FrontEndPatters = () => {
     return (
         <>
             <h3>FrontEnd Design Patterns</h3>
+            {/* Patterns section */}
             <ContainerPresentational />
             <CustomHook />
             <Compound />
@@ -13,6 +14,7 @@ const FrontEndPatters = () => {
             <Headless />
             <StateReducer />
             <Composition />
+            {/* Info section  */}
             <Info/>
         </>
     )
