@@ -11,7 +11,7 @@ const Liskov = () => {
     );
 
     return (
-        <section className="solidContainer">
+        <section className="ExampleContainer">
             <header>
                 <h2>Liskov Substitution Principle (LSP)</h2>
                 <p className="solid-description">

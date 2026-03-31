@@ -1,4 +1,3 @@
-import './index.css';
 import SingleResponsability from './Principles/SingleResponsability';
 import OpenClosedResponsability from './Principles/OpenClosedResponsability';
 import Liskov from './Principles/Liskov';

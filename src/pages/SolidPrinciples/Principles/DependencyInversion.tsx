@@ -12,7 +12,7 @@ const DependencyInversion = () => {
     );
 
     return (
-        <section className="solidContainer">
+        <section className="ExampleContainer">
             <header>
                 <h2>Dependency Inversion Principle (DIP)</h2>
                 <p className="solid-description">

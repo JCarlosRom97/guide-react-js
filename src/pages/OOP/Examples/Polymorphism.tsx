@@ -19,7 +19,7 @@ const Polymorphism = () => {
 
 
     return (
-        <div className="oopContainer">
+        <div className="ExampleContainer">
             <h2>Polymorphism</h2>
             <p>Polymorphism allows the same method to behave differently depending on the object.</p>
             <CodeBlock code={data || ''} />

@@ -9,6 +9,11 @@ export const exercisesReactHooks: Exercise[] = [
         id: 2,
         name: "🕒 Async/Await Promises",
         url: "async"
+    },
+    {
+        id: 3,
+        name: "🧩 Front end Design Patterns (Pending) ",
+        url: "design-patterns"
     }
 
 ]

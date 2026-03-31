@@ -19,7 +19,7 @@ const Abstraction = () => {
 
 
     return (
-        <div className="oopContainer">
+        <div className="ExampleContainer">
             <h2>Abstraction</h2>
             <p>Abstraction hides internal complexity and exposes only what is necessary.</p>
             <CodeBlock code={data || ""}  />

@@ -12,7 +12,7 @@ const OpenClosedResponsability = () => {
     );
 
     return (
-        <section className="solidContainer">
+        <section className="ExampleContainer">
             <header>
                 <h2>Open/Closed Responsability (OCP)</h2>
                 <p className="solid-description">

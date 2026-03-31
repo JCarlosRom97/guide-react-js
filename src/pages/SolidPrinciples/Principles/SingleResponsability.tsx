@@ -11,7 +11,7 @@ const SingleResponsability = () => {
     );
 
     return (
-        <section className="solidContainer">
+        <section className="ExampleContainer">
             <header>
                 <h2>Single Responsibility Principle (SRP)</h2>
                 <p className="solid-description">

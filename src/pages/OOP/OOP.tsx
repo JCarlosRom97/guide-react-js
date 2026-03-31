@@ -1,4 +1,3 @@
-import './styles.css'
 import Inheritance from './Examples/Inheritance';
 import Abstraction from './Examples/Abstraction';
 import Encapsulation from './Examples/Encapsulation';

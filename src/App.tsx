@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Counter } from "./pages/Counter";
@@ -12,6 +12,7 @@ import { Pokemon } from './pages/Pokemon/Home';
 import { Detail } from './pages/Pokemon/Detail';
 import { OOP } from './pages/OOP';
 import { Solid } from './pages/SolidPrinciples';
+import FrontEndPatters from './pages/FrontEndPatterns/FrontEndPatterns';
 
 // React Hooks
 import { UseEffectScreen } from './pages/useEffect';
@@ -32,8 +33,9 @@ export const App = () => {
                     {/* React hooks */}
                     <Route path="/useEffect" element={<UseEffectScreen />} />
                     <Route path="/async" element={<Async />} />
+                    <Route path="/design-patterns" element={<FrontEndPatters />} />
                     {/* JS Core */}
-                    <Route path="/oop" element={<OOP />} />
+                    <Route path="/oop" element={<OOP />} /> 
                     <Route path="/solid" element={<Solid />} />
                 </Routes>
             </div>

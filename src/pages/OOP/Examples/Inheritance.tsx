@@ -19,7 +19,7 @@ const Inheritance = () => {
 
 
     return (
-        <div className="oopContainer">
+        <div className="ExampleContainer">
             <h2>Inheritance</h2>
             <p>Inheritance allows me to reuse code from a base class and specialize it in child classes.</p>
             <CodeBlock code={data || ""} />

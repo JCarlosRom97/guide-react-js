@@ -19,7 +19,7 @@ const Encapsulation = () => {
 
 
     return (
-        <div className="oopContainer">
+        <div className="ExampleContainer">
             <h2>Encapsulation</h2>
             <p>Encapsulation protects internal data and controls how it is accessed or modified.</p>
             <CodeBlock code={data || ""} />

@@ -10,7 +10,7 @@ const InterfaceSegregation = () => {
         '/Solid/InterfaceSegregation/badImplementation.txt'
     );
     return (
-        <section className="solidContainer">
+        <section className="ExampleContainer">
             <header>
                 <h2>Interface Segregation Principle (ISP)</h2>
                 <p className="solid-description">
