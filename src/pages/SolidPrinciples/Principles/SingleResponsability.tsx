@@ -1,14 +1,6 @@
-import { CodeBlock } from "../../../components/CodeBlock/CodeBlock";
-import { useFetchText } from "../../../hooks/useGetText";
-
+import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+import { SolidUrls } from "../../../types";
 const SingleResponsability = () => {
-    const { data: dataGoodImp, isLoading: isLoadingGoodImp, isError: isErrorGoodImp, error: errorGoodImp } = useFetchText(
-        '/Solid/SingleResponsability/goodImplementation.txt'
-    );
-
-    const { data: dataBadImp, isLoading: isLoadingBadImp, isError: isErrorBadImplementation, error: errorBadImp } = useFetchText(
-        '/Solid/SingleResponsability/badImplementation.txt'
-    );
 
     return (
         <section className="ExampleContainer">
@@ -20,38 +12,17 @@ const SingleResponsability = () => {
             </header>
 
             <article className="solid-block">
-                <h3>❌ Bad Example</h3>
-
-                {isLoadingBadImp && <p>Loading code...</p>}
-
-                {isErrorBadImplementation && (
-                    <p role="alert" className="error">
-                        Error: {errorBadImp}
-                    </p>
-                )}
-
-                {!isLoadingBadImp && !isErrorBadImplementation && dataBadImp && (
-                    <CodeBlock code={dataBadImp} />
-                )}
+                <ExampleItem title="❌ Bad Example" url={SolidUrls.SingleResponsabilityBad} />
             </article>
 
             <article className="solid-block">
                 <h3>✅ Good Approach</h3>
-                {isLoadingGoodImp && <p>Loading code...</p>}
-
-                {isErrorGoodImp && (
-                    <p role="alert" className="error">
-                        Error: {errorGoodImp}
-                    </p>
-                )}
-                <ul>
+                <ul className="left">
                     <li><strong>Hook</strong> → state + fetching logic</li>
                     <li><strong>Service</strong> → API communication</li>
                     <li><strong>Component</strong> → UI</li>
                 </ul>
-                {!isLoadingGoodImp && !isErrorGoodImp && dataGoodImp && (
-                    <CodeBlock code={dataGoodImp} />
-                )}
+                <ExampleItem url={SolidUrls.SingleResponsabilityGood} />
                 <p className="solid-highlight">
                     👉 Easier to test, reuse, and maintain.
                 </p>

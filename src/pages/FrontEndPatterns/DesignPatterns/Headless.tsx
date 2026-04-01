@@ -1,4 +1,5 @@
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+import { DesignPatternsUrls } from "../../../types";
 
 const Headless = () =>{
     return(
@@ -8,7 +9,7 @@ const Headless = () =>{
                 <li className="noPoint"><strong>📌 Concept</strong></li>
                 <li>Logic without UI.</li>
             </ul>
-            <ExampleItem title="💻 Example" url="DesignPatterns/Headless/Example.txt" />
+            <ExampleItem title="💻 Example" url={DesignPatternsUrls.Headless} />
             <ul className="left">
                 <li className="noPoint"><strong>🧠 Senior Insight</strong></li>
                 <li>🔥 Foundation of:</li>

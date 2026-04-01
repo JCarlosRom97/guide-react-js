@@ -1,4 +1,5 @@
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+import { DesignPatternsUrls } from "../../../types";
 
 const ControlledUncontrolled = () => {
     return (
@@ -9,8 +10,8 @@ const ControlledUncontrolled = () => {
                 <li>Who owns the state</li>
             </ul>
             <h3 className="left">💻 Example</h3>
-            <ExampleItem title="Controlled" url="DesignPatterns/ControlledUncontrolled/Example1.txt" />
-            <ExampleItem title="Uncontrolled" url="DesignPatterns/ControlledUncontrolled/Example2.txt" />
+            <ExampleItem title="Controlled" url={DesignPatternsUrls.Controlled} />
+            <ExampleItem title="Uncontrolled" url={DesignPatternsUrls.Uncontrolled} />
             <ul className="left">
                 <li className="noPoint"><strong>🧠 Senior Insight</strong></li>
                 <ul>

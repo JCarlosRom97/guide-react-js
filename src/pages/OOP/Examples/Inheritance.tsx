@@ -1,12 +1,12 @@
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
-
+import { OOPUrls } from "../../../types";
 const Inheritance = () => {
 
     return (
         <div className="ExampleContainer">
             <h2>Inheritance</h2>
             <p>Inheritance allows me to reuse code from a base class and specialize it in child classes.</p>
-            <ExampleItem url="/OOP/Inheritance.txt" />
+            <ExampleItem url={OOPUrls.Inheritance} />
 
             <h3 className="left">💡 Explanation</h3>
 

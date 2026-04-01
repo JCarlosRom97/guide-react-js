@@ -1,4 +1,5 @@
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+import { DesignPatternsUrls } from "../../../types";
 
 const CustomHook = () => {
     return (
@@ -8,8 +9,8 @@ const CustomHook = () => {
                 <li className="noPoint"><strong>Concept:</strong></li>
                 <li>Extract reusable logic into hooks.</li>
             </ul>
-            <ExampleItem title="💻 Example" url="DesignPatterns/CustomHook/Example.txt" />
-            <ExampleItem url="DesignPatterns/CustomHook/Example2.txt" />
+            <ExampleItem title="💻 Example" url={DesignPatternsUrls.CustomHookExample1} />
+            <ExampleItem url={DesignPatternsUrls.CustomHookExample2} />
         </section>
     )
 }

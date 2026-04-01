@@ -1,12 +1,12 @@
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
-
+import { OOPUrls } from "../../../types";
 const Abstraction = () => {
 
     return (
         <div className="ExampleContainer">
             <h2>Abstraction</h2>
             <p>Abstraction hides internal complexity and exposes only what is necessary.</p>
-            <ExampleItem url="/OOP/Abstraction.txt" />
+            <ExampleItem url={OOPUrls.Abstraction} />
             <h3 className="left">Explanation</h3>
 
             <ul className="left">

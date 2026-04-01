@@ -1,4 +1,5 @@
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+import { DesignPatternsUrls } from "../../../types";
 
 const Provider = () =>{
     return (
@@ -8,7 +9,7 @@ const Provider = () =>{
                 <li className="noPoint"><strong>📌 Concept</strong></li>
                 <li>Global shared state without prop drilling</li>
             </ul>
-            <ExampleItem title="💻 Example" url="DesignPatterns/Provider/Example1.txt" />
+            <ExampleItem title="💻 Example" url={DesignPatternsUrls.Provider} />
             <ul className="left">
                 <li className="noPoint"><strong>🧠 Senior Insight</strong></li>
                 <li>⚠️ Pitfall:</li>

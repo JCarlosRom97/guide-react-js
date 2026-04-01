@@ -1,15 +1,6 @@
-import { CodeBlock } from "../../../components/CodeBlock/CodeBlock";
-import { useFetchText } from "../../../hooks/useGetText";
-
+import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+import { SolidUrls } from "../../../types";
 const DependencyInversion = () => {
-
-    const { data: dataGoodImp, isLoading: isLoadingGoodImp, isError: isErrorGoodImp, error: errorGoodImp } = useFetchText(
-        '/Solid/DependencyInversion/goodImplementation.txt'
-    );
-
-    const { data: dataBadImp, isLoading: isLoadingBadImp, isError: isErrorBadImplementation, error: errorBadImp } = useFetchText(
-        '/Solid/DependencyInversion/badImplementation.txt'
-    );
 
     return (
         <section className="ExampleContainer">
@@ -20,37 +11,14 @@ const DependencyInversion = () => {
                 </p>
             </header>
             <article className="solid-block">
-                <h3>❌ Bad Example</h3>
-
-                {isLoadingBadImp && <p>Loading code...</p>}
-
-                {isErrorBadImplementation && (
-                    <p role="alert" className="error">
-                        Error: {errorBadImp}
-                    </p>
-                )}
-
-                {!isLoadingBadImp && !isErrorBadImplementation && dataBadImp && (
-                    <CodeBlock code={dataBadImp} />
-                )}
+                <ExampleItem title="❌ Bad Example" url={SolidUrls.DependencyInversionBad} />
             </article>
             <article className="solid-block">
-                <h3>✅ Good Approach</h3>
-                {isLoadingGoodImp && <p>Loading code...</p>}
-
-                {isErrorGoodImp && (
-                    <p role="alert" className="error">
-                        Error: {errorGoodImp}
-                    </p>
-                )}
-                {!isLoadingGoodImp && !isErrorGoodImp && dataGoodImp && (
-                    <CodeBlock code={dataGoodImp} />
-                )}
-                <ul>
-                    <li> <strong>Explanation:</strong></li>
+                <ExampleItem title="✅ Good Approach" url={SolidUrls.DependencyInversionGood} />
+                <h3>Explanation:</h3>
+                <ul className="left">
                     <li>Logic depends on an <strong>abstraction (fetchFn).</strong></li>
                     <li>Makes testing and flexibility easier.</li>
-
                 </ul>
             </article>
         </section>

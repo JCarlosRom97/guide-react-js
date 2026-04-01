@@ -1,13 +1,13 @@
 import { CodeBlock } from "../../../components/CodeBlock/CodeBlock"
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
-
+import { OOPUrls } from "../../../types";
 const Encapsulation = () => {
 
     return (
         <div className="ExampleContainer">
             <h2>Encapsulation</h2>
             <p>Encapsulation protects internal data and controls how it is accessed or modified.</p>
-            <ExampleItem url="/OOP/Encapsulation.txt" />
+            <ExampleItem url={OOPUrls.Encapsulation} />
             <h3>💡 Explanation</h3>
 
             <ul className="left">

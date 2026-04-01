@@ -1,4 +1,5 @@
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+import { DesignPatternsUrls } from "../../../types";
 
 const Composition = () =>{
     return (
@@ -8,7 +9,7 @@ const Composition = () =>{
                 <li className="noPoint"><strong>📌 Concept</strong></li>
                 <li>Favor composition over inheritance</li>
             </ul>
-            <ExampleItem title="💻 Example" url="DesignPatterns/Composition/Example.txt" />
+            <ExampleItem title="💻 Example" url={DesignPatternsUrls.Composition} />
             <ul className="left">
                 <li className="noPoint"><strong>🧠 Senior Insight</strong></li>
                 <li>👉 This is the <strong>core philosophy of React:</strong></li>

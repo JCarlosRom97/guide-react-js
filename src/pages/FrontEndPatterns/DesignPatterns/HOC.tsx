@@ -1,4 +1,5 @@
 import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+import { DesignPatternsUrls } from "../../../types";
 
 const HOC = () =>{
     return (
@@ -8,7 +9,7 @@ const HOC = () =>{
                 <li className="noPoint"><strong>📌 Concept</strong></li>
                 <li>A function that wraps a component.</li>
             </ul>
-            <ExampleItem url="DesignPatterns/HOC/Example1.txt" />
+            <ExampleItem url={DesignPatternsUrls.HOC} />
             <ul className="left">
                 <li className="noPoint">🧠 Senior Insight</li>
                 <li>⚠️ Problems:</li>
