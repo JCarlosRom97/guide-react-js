@@ -13,7 +13,7 @@ type ExerciseListProps = {
 
 export const ExerciseList = ({ list }: ExerciseListProps) => {
     return (
-        <div className="horizontalContainer marginContainer">
+        <div className="horizontalContainer">
             {list.map(((exercise:ExercisesType) =>(
                 <ButtonList key={exercise.id} exercise={exercise} />
             )))}
