@@ -12,7 +12,7 @@ export const exercisesReactHooks: Exercise[] = [
     },
     {
         id: 3,
-        name: "🧩 Front end Design Patterns (Pending) ",
+        name: "🧩 Front end Design Patterns",
         url: "design-patterns"
     }
 
