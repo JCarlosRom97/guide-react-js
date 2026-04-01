@@ -59,11 +59,14 @@ select {
   font-size: 16px;
   background: rgba(30, 64, 175, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  margin: 10px;
   border-radius: 14px;
   transition: all 0.25s ease;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .Item:hover {
@@ -76,9 +79,9 @@ select {
 .horizontalContainer {
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  align-items: center;
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  padding: 0 16px;
 }
 
 .verticalContainer {
@@ -162,4 +165,18 @@ tbody tr {
 
 tbody tr:nth-child(even) {
   background-color: #1f2937;
+}
+
+@media (min-width: 1024px) {
+  .horizontalContainer {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (hover: hover) {
+  .Item:hover {
+    transform: translateY(-5px);
+    background: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  }
 }
