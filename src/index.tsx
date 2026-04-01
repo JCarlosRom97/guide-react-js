@@ -11,7 +11,7 @@ if (!container) throw new Error("Root container missing in index.html");
 
 const root = ReactDOM.createRoot(container);
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/guide-react-js">
     <Provider store={store}>
       <App />
     </Provider>

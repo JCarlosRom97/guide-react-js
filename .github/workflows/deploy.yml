@@ -3,36 +3,50 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # o master
+      - main  # cambia si usas otra rama
 
 permissions:
   contents: read
   pages: write
   id-token: write
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Clonar repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Configurar Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
+      # 3. Instalar dependencias
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
+      # 4. Build del proyecto (CRA → build/)
       - name: Build project
         run: npm run build
 
+      # 5. Debug (opcional pero recomendado)
+      - name: Show build files
+        run: ls -la build
+
+      # 6. Subir artefacto para GitHub Pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist  # ⚠️ importante
+          path: ./build   # ✅ IMPORTANTE (CRA usa build, no dist)
 
   deploy:
     environment:
@@ -43,6 +57,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 7. Deploy automático
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
