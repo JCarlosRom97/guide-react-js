@@ -1,7 +1,4 @@
-import Inheritance from './Examples/Inheritance';
-import Abstraction from './Examples/Abstraction';
-import Encapsulation from './Examples/Encapsulation';
-import Polymorphism from './Examples/Polymorphism';
+import { Inheritance, Abstraction, Encapsulation, Polymorphism } from "./Examples"
 export const OOP = () => {
 
     return (

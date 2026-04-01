@@ -1,39 +1,27 @@
 import { CodeBlock } from "../../../components/CodeBlock/CodeBlock"
-import { useFetchText } from "../../../hooks/useGetText";
-const blankSpace = "\u00A0";
+import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+
 const Encapsulation = () => {
-
-    const { data, isLoading, isError, error } = useFetchText(
-        '/OOP/Encapsulation.txt'
-    );
-
-    if (isError)
-        return (
-            <p>{error}</p>
-        )
-
-    if (isLoading)
-        return (
-            <p>Loading</p>
-        )
-
 
     return (
         <div className="ExampleContainer">
             <h2>Encapsulation</h2>
             <p>Encapsulation protects internal data and controls how it is accessed or modified.</p>
-            <CodeBlock code={data || ""} />
-            <p>💡 Explanation <br />
+            <ExampleItem url="/OOP/Encapsulation.txt" />
+            <h3>💡 Explanation</h3>
 
-                {blankSpace.repeat(10)}#balance is private <br />
-
-                {blankSpace.repeat(10)}You cannot access it directly:</p>
+            <ul className="left">
+                <li>#balance is private</li>
+                <li>You cannot access it directly:</li>
+            </ul>
             <CodeBlock code={'account.#balance'} />
-            <p>*You must use: <br />
-
-                {blankSpace.repeat(10)}deposit() <br />
-
-                {blankSpace.repeat(10)}getBalance()</p>
+            <ul className="left">
+                <li>You must use: </li>
+                <ul>
+                    <li>deposit()</li>
+                    <li>getBalance()</li>
+                </ul>
+            </ul>
         </div>
     )
 }

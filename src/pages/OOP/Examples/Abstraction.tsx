@@ -1,41 +1,23 @@
-import { CodeBlock } from "../../../components/CodeBlock/CodeBlock"
-import { useFetchText } from "../../../hooks/useGetText";
-const blankSpace = "\u00A0";
+import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+
 const Abstraction = () => {
-
-    const { data, isLoading, isError, error } = useFetchText(
-        '/OOP/Abstraction.txt'
-    );
-
-    if (isError)
-        return (
-            <p>{error}</p>
-        )
-
-    if (isLoading)
-        return (
-            <p>Loading</p>
-        )
-
 
     return (
         <div className="ExampleContainer">
             <h2>Abstraction</h2>
             <p>Abstraction hides internal complexity and exposes only what is necessary.</p>
-            <CodeBlock code={data || ""}  />
-            <p>
-                💡 Explanation <br />
+            <ExampleItem url="/OOP/Abstraction.txt" />
+            <h3 className="left">Explanation</h3>
 
-                * The user only interacts with makeCoffee() <br />
-
-                * Internally: <br />
-
-                {blankSpace.repeat(10)}* it boils water <br />
-
-                {blankSpace.repeat(10)}* grinds coffee <br />
-
-                * But those details are hidden <br />
-            </p>
+            <ul className="left">
+                <li>The user only interacts with makeCoffee()</li>
+                <li>Internally:</li>
+                <ul>
+                    <li>it boils water</li>
+                    <li>grinds coffee</li>
+                </ul>
+                <li>But those details are hidden</li>
+            </ul>
         </div>
     )
 }

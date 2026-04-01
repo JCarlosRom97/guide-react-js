@@ -1,39 +1,21 @@
-import { CodeBlock } from "../../../components/CodeBlock/CodeBlock"
-import { useFetchText } from "../../../hooks/useGetText";
-const blankSpace = "\u00A0";
+import ExampleItem from "../../../components/ExampleItem/ExampleItem";
 const Polymorphism = () => {
-
-    const { data, isLoading, isError, error } = useFetchText(
-        '/OOP/Polymorphism.txt'
-    );
-
-    if (isError)
-        return (
-            <p>{error}</p>
-        )
-
-    if (isLoading)
-        return (
-            <p>Loading</p>
-        )
-
 
     return (
         <div className="ExampleContainer">
             <h2>Polymorphism</h2>
             <p>Polymorphism allows the same method to behave differently depending on the object.</p>
-            <CodeBlock code={data || ''} />
-            <p>💡 Explanation <br />
-
-                {blankSpace.repeat(5)}* Different classes (Cat, Cow) <br />
-
-                {blankSpace.repeat(5)}* Same method name: makeSound() <br />
-
-                {blankSpace.repeat(5)}* The function playSound: <br />
-
-                {blankSpace.repeat(10)}* doesn’t care about the type <br />
-
-                {blankSpace.repeat(10)}* just calls the method</p>
+            <ExampleItem url="/OOP/Polymorphism.txt" />
+            <h3>💡 Explanation </h3>
+            <ul className="left">
+                <li>Different classes (Cat, Cow)</li>
+                <li>Same method name: makeSound()</li>
+                <li>The function playSound:</li>
+                <ul>
+                    <li>doesn’t care about the type</li>
+                    <li>just calls the method</li>
+                </ul>
+            </ul>
         </div>
     )
 }

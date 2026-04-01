@@ -1,41 +1,25 @@
-import { CodeBlock } from "../../../components/CodeBlock/CodeBlock"
-import { useFetchText } from "../../../hooks/useGetText";
-const blankSpace = "\u00A0";
+import ExampleItem from "../../../components/ExampleItem/ExampleItem";
+
 const Inheritance = () => {
-
-    const { data, isLoading, isError, error } = useFetchText(
-        '/OOP/Inheritance.txt'
-    );
-
-    if (isError)
-        return (
-            <p>{error}</p>
-        )
-
-    if(isLoading)
-        return (
-            <p>Loading</p>
-        )
-
 
     return (
         <div className="ExampleContainer">
             <h2>Inheritance</h2>
             <p>Inheritance allows me to reuse code from a base class and specialize it in child classes.</p>
-            <CodeBlock code={data || ""} />
-            <p>💡 Explanation  <br />
+            <ExampleItem url="/OOP/Inheritance.txt" />
 
-                * Dog inherits from Animal<br />
+            <h3 className="left">💡 Explanation</h3>
 
-                * It gets:<br />
-
-                {blankSpace.repeat(10)}* the name property<br />
-
-                {blankSpace.repeat(10)}* all methods from Animal<br />
-
-                * But it can also override behavior<br />
-
-                👉 Here, makeSound() is overridden</p>
+            <ul className="left">
+                <li>Dogs inherits from Animal</li>
+                <li>It gets:</li>
+                <ul>
+                    <li>The name property</li>
+                    <li>All methods from Animal</li>
+                </ul>
+                <li>But is can also override behavior</li>
+                <li> 👉 Here, makeSound() is overridden</li>
+            </ul>
         </div>
     )
 }
