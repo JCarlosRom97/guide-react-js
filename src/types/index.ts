@@ -50,41 +50,51 @@ export type PokemonDetail = {
     }
   }[]
 }
-/* ENUMS */
-export enum SolidUrls {
-  SingleResponsabilityGood = "/Solid/SingleResponsability/goodImplementation.txt",
-  SingleResponsabilityBad = "/Solid/SingleResponsability/badImplementation.txt",
-  OpenClosedGood = "/Solid/OpenClosed/goodImplementation.txt",
-  OpenClosedBad = "/Solid/OpenClosed/badImplementation.txt",
-  LiskovGood = "/Solid/Liskov/goodImplementation.txt",
-  LiskovBad = "/Solid/Liskov/badImplementation.txt",
-  InterfaceGood = "/Solid/InterfaceSegregation/goodImplementation.txt",
-  InterfaceBad = "/Solid/InterfaceSegregation/badImplementation.txt",
-  DependencyInversionGood = "/Solid/DependencyInversion/goodImplementation.txt",
-  DependencyInversionBad = "/Solid/DependencyInversion/badImplementation.txt"
-}
+const withBase = (path: string) => `${process.env.PUBLIC_URL}${path}`;
 
-export enum OOPUrls {
-  Abstraction = "/OOP/Abstraction.txt",
-  Encapsulation = "/OOP/Encapsulation.txt",
-  Inheritance = "/OOP/Inheritance.txt",
-  Polymorphism = "/OOP/Polymorphism.txt"
-}
+/* =======================
+   SOLID
+======================= */
+export const SolidUrls = {
+  SingleResponsabilityGood: withBase("/Solid/SingleResponsability/goodImplementation.txt"),
+  SingleResponsabilityBad: withBase("/Solid/SingleResponsability/badImplementation.txt"),
+  OpenClosedGood: withBase("/Solid/OpenClosed/goodImplementation.txt"),
+  OpenClosedBad: withBase("/Solid/OpenClosed/badImplementation.txt"),
+  LiskovGood: withBase("/Solid/Liskov/goodImplementation.txt"),
+  LiskovBad: withBase("/Solid/Liskov/badImplementation.txt"),
+  InterfaceGood: withBase("/Solid/InterfaceSegregation/goodImplementation.txt"),
+  InterfaceBad: withBase("/Solid/InterfaceSegregation/badImplementation.txt"),
+  DependencyInversionGood: withBase("/Solid/DependencyInversion/goodImplementation.txt"),
+  DependencyInversionBad: withBase("/Solid/DependencyInversion/badImplementation.txt")
+} as const;
 
-export enum DesignPatternsUrls {
-  Composition = "DesignPatterns/Composition/Example.txt",
-  CompoundExample1 = "DesignPatterns/CompoundComponents/Example1.txt",
-  CompoundExample2 = "DesignPatterns/CompoundComponents/Example2.txt",
-  Container = "/DesignPatterns/ContainerPresentational/Container.txt",
-  Presentational = "/DesignPatterns/ContainerPresentational/Presentational.txt",
-  Controlled = "DesignPatterns/ControlledUncontrolled/Controlled.txt",
-  Uncontrolled = "DesignPatterns/ControlledUncontrolled/Uncontrolled.txt",
-  CustomHookExample1 = "DesignPatterns/CustomHook/Example.txt",
-  CustomHookExample2 = "DesignPatterns/CustomHook/Example2.txt",
-  Headless = "DesignPatterns/Headless/Example.txt",
-  HOC = "DesignPatterns/HOC/Example1.txt",
-  Provider = "DesignPatterns/Provider/Example1.txt",
-  RenderPropsExample1 = "DesignPatterns/RenderProps/Example1.txt",
-  RenderPropsExample2 = "DesignPatterns/RenderProps/Example2.txt",
-  StateReducer = "DesignPatterns/StateReducer/Example.txt"
-}
+/* =======================
+   OOP
+======================= */
+export const OOPUrls = {
+  Abstraction: withBase("/OOP/Abstraction.txt"),
+  Encapsulation: withBase("/OOP/Encapsulation.txt"),
+  Inheritance: withBase("/OOP/Inheritance.txt"),
+  Polymorphism: withBase("/OOP/Polymorphism.txt")
+} as const;
+
+/* =======================
+   DESIGN PATTERNS
+======================= */
+export const DesignPatternsUrls = {
+  Composition: withBase("/DesignPatterns/Composition/Example.txt"),
+  CompoundExample1: withBase("/DesignPatterns/CompoundComponents/Example1.txt"),
+  CompoundExample2: withBase("/DesignPatterns/CompoundComponents/Example2.txt"),
+  Container: withBase("/DesignPatterns/ContainerPresentational/Container.txt"),
+  Presentational: withBase("/DesignPatterns/ContainerPresentational/Presentational.txt"),
+  Controlled: withBase("/DesignPatterns/ControlledUncontrolled/Controlled.txt"),
+  Uncontrolled: withBase("/DesignPatterns/ControlledUncontrolled/Uncontrolled.txt"),
+  CustomHookExample1: withBase("/DesignPatterns/CustomHook/Example.txt"),
+  CustomHookExample2: withBase("/DesignPatterns/CustomHook/Example2.txt"),
+  Headless: withBase("/DesignPatterns/Headless/Example.txt"),
+  HOC: withBase("/DesignPatterns/HOC/Example1.txt"),
+  Provider: withBase("/DesignPatterns/Provider/Example1.txt"),
+  RenderPropsExample1: withBase("/DesignPatterns/RenderProps/Example1.txt"),
+  RenderPropsExample2: withBase("/DesignPatterns/RenderProps/Example2.txt"),
+  StateReducer: withBase("/DesignPatterns/StateReducer/Example.txt")
+} as const;
