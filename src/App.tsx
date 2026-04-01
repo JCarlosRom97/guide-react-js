@@ -13,6 +13,7 @@ import { Detail } from './pages/Pokemon/Detail';
 import { OOP } from './pages/OOP';
 import { Solid } from './pages/SolidPrinciples';
 import FrontEndPatters from './pages/FrontEndPatterns/FrontEndPatterns';
+import { Footer } from './components/Layout/Footer';
 
 // React Hooks
 import { UseEffectScreen } from './pages/useEffect';
@@ -39,6 +40,7 @@ export const App = () => {
                     <Route path="/solid" element={<Solid />} />
                 </Routes>
             </div>
+            <Footer/>
         </div>
     )
 }
